@@ -9,8 +9,10 @@
 
 //vendor
 @import '../../../vendor/compass-breakpoint/stylesheets/breakpoint';
-//UNCOMMENT IF USING SASS-CORE FRAMEWORK (update the path to your actual vendor dir path), customize variables in previously imported file (e.g. variables)
-//@import '../../../vendor/sass-core/dist/sass-core';
+
+//REMOVE IF YOU ARE NOT USING SASS-CORE FRAMEWORK
+//otherwise, update the path to your actual vendor dir path (if app dir changed), customize variables in previously imported file (e.g. variables)
+@import '../../../vendor/sass-core/dist/sass-core';
 
 //custom config
 @import 'config/mixins';

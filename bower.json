@@ -1,0 +1,19 @@
+{
+  "name": "fs-bundle-default",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "1.*.*",
+    "compass-breakpoint": "2.*.*",
+    "html5shiv": "*",
+    "sass-core": "*"
+  },
+
+  "overrides": {
+      "compass-breakpoint": {
+          "ignore": true
+      },
+      "html5shiv": {
+          "ignore": true
+      }
+  }
+}

@@ -15,13 +15,25 @@ On Windows, remember to run Bower from Git Shell.
 <br>
 ## Directory structure
 
-* `fonts`: font files for font-face generation
-* `img`: images; `img/sprites` is the default directory for sprites
-* `js`: your JavaScript files concatenated into the `app.js` (by default) file; `js/vendor` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file
-* `styles`: see below
-* `views`: see below
+### Fonts: `/fonts`
+Font files for font-face generation.
 
-### Styles
+
+### Images: `/img`
+Your images, that will be optimized and saved in the dist directory . `img/sprites` is the default directory for sprites (see more in the [Sprites](#styles-sprites) section).
+
+
+### Javascript: `/js`
+All your JavaScript files (including those installed with Bower) are by default concatenated into one file: `app.js`. Thanks to this, you don't have to change markup when adding/removing any files or packages.
+
+`js/vendor` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
+
+If you want to skip eny of the Bower packages, use the `overrides` option in the `bower.json` file or edit the configuration `config.js.common.mainBowerFiles.overrides` value. See [main-bower-files] docs.
+
+
+
+
+### Styles: `/styles`
 A simple direcotry structure is taken from [SASS-starter (see the docs)][sass-starter].
 
 By default, [meyer-reset] is included. Additionally, [SASS-core][sass-core] mixins and functions are available.
@@ -30,13 +42,14 @@ If you don't need any them:
 * remove the dependency from the `bower.json` file
 * remove import from `styles/style.scss`
 
+<a name="styles-sprites"></a>
 #### Sprites
-Sprites are generated automatically by [gulp-spritesmith][gulp-spritesmith] for all images placed in the `img/sprites` directory. To use a sprite, you have to uncomment the line in style.scss with sprites sheet import. See more in [SASS-core][sass-core] docs.
+Sprites are generated automatically by [gulp-spritesmith] for all images placed in the `img/sprites` directory. To use a sprite, you have to uncomment the line in style.scss with sprites sheet import. See more in [SASS-core][sass-core] docs.
 
 You can generate multiple, separate sprite files - see the [Frontend-starter configuration section][frontend-starter] section.
 
 
-### Views
+### Views: `/views`
 Thanks to the [Swig plugin][gulp-swig], you can use features brought by this templating system: extending layouts, including partials, variables/if and for blocks/macros and so on. See the [docs][swig-docs].
 
 The proposed structure is:
@@ -52,7 +65,9 @@ You can inject custom code using blocks - by default there are 3 of them:
 
 
 [frontend-starter]: https://github.com/implico/frontend-starter
+[gulp-spritesmith]: https://github.com/twolfson/gulp.spritesmith
 [gulp-swig]: https://github.com/colynb/gulp-swig
+[main-bower-files]: https://github.com/ck86/main-bower-files
 [meyer-reset]: https://github.com/adamstac/meyer-reset
 [sass-core]: https://github.com/implico/sass-core
 [sass-starter]: https://github.com/implico/sass-starter

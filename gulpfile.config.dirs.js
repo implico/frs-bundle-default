@@ -3,7 +3,7 @@ module.exports = function(dirs, mode) {
 
   switch (mode) {
 
-    //invoked after setting the src dir (set custom src dir here)
+    //invoked after setting the src dir (set custom src dir here; REMEMBER TO UPDATE SOURCE MAP SETTINGS)
     case 'src':
       //e.g.
       //dirs.src.main = dirs.app + 'source_dir/';

@@ -2,20 +2,25 @@
   "name": "fs-bundle-default",
   "version": "0.1.0",
   "dependencies": {
-    "jquery": "1.*.*",
+    "meyer-reset": "*",
     "compass-breakpoint": "2.*.*",
+    "sass-core": "*",
+
     "html5shiv": "*",
-    "sass-core": "*"
+    "jquery": "1.*.*"
   },
 
   "overrides": {
+      "meyer-reset": {
+        "ignore": true
+      },
       "compass-breakpoint": {
           "ignore": true
       },
-      "html5shiv": {
+      "sass-core": {
           "ignore": true
       },
-      "sass-core": {
+      "html5shiv": {
           "ignore": true
       }
   }

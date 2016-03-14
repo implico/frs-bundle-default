@@ -24,7 +24,9 @@ On Windows, remember to run Bower from Git Shell.
 ### Styles
 A simple direcotry structure is taken from [SASS-starter (see the docs)][sass-starter].
 
-Additionally, [SASS-core][sass-core] mixins and functions are available. If you don't need them:
+By default, [meyer-reset] is included. Additionally, [SASS-core][sass-core] mixins and functions are available.
+
+If you don't need any them:
 * remove the dependency from the `bower.json` file
 * remove import from `styles/style.scss`
 
@@ -51,6 +53,7 @@ You can inject custom code using blocks - by default there are 3 of them:
 
 [frontend-starter]: https://github.com/implico/frontend-starter
 [gulp-swig]: https://github.com/colynb/gulp-swig
+[meyer-reset]: https://github.com/adamstac/meyer-reset
 [sass-core]: https://github.com/implico/sass-core
 [sass-starter]: https://github.com/implico/sass-starter
 [swig-docs]: http://paularmstrong.github.io/swig/docs/

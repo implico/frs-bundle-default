@@ -2,6 +2,16 @@
 
 This is a bundle for [Frontend-starter][frontend-starter] with default directory structure.
 
+
+## Installation
+Clone [Frontend-starter][frontend-starter], then create a directory named `app` and unpack/clone this repo into. Then run (in the `app` directory):
+
+```
+bower install
+```
+
+On Windows, remember to run Bower from Git Shell.
+
 <br>
 ## Directory structure
 
@@ -17,6 +27,12 @@ A simple direcotry structure is taken from [SASS-starter (see the docs)][sass-st
 Additionally, [SASS-core][sass-core] mixins and functions are available. If you don't need them:
 * remove the dependency from the `bower.json` file
 * remove import from `styles/style.scss`
+
+#### Sprites
+Sprites are generated automatically by [gulp-spritesmith][gulp-spritesmith] for all images placed in the `img/sprites` directory. To use a sprite, you have to uncomment the line in style.scss with sprites sheet import. See more in [SASS-core][sass-core] docs.
+
+You can generate multiple, separate sprite files - see the [Frontend-starter configuration section][frontend-starter] section.
+
 
 ### Views
 Thanks to the [Twig plugin][gulp-twig], you can use features brought by this templating system: extending layouts, including partials, variables/if and for blocks/macros and so on. See the [docs][twig].

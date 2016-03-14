@@ -1,4 +1,4 @@
-{% extends "default.twig" %}
+{% extends "default.swig" %}
 
 {# layout blocks - edit/add your own #}
 {% block headTitle %}Index{% endblock headTitle %}

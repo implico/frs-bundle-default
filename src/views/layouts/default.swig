@@ -25,13 +25,13 @@
 
   	<div id="layout-main-wrap">
 
-      {% include "partials/header.twig" %}
+      {% include "partials/header.swig" %}
 
       <main>
         {% block content %}{% endblock %}
       </main>
 
-      {% include "partials/footer.twig" %}
+      {% include "partials/footer.swig" %}
 
   	</div>
 

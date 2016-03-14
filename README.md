@@ -4,7 +4,7 @@ This is a bundle for [Frontend-starter][frontend-starter] with default directory
 
 
 ## Installation
-Clone [Frontend-starter][frontend-starter], then create a directory named `app` and unpack this repo into (if you clone, you'd rather want to remove the `.git` directory to avoid an accidental pull from the origin). Then run (in the `app` directory):
+Install [Frontend-starter][frontend-starter], then create a directory named `app` and unpack this repo into (if you clone, you'd rather want to remove the `.git` directory to avoid an accidental pull from the origin). Then run (in the `app` directory):
 
 ```
 bower install
@@ -28,7 +28,7 @@ All your JavaScript files (including those installed with Bower) are by default 
 
 `js/vendor` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
 
-If you want to skip eny of the Bower packages, use the `overrides` option in the `bower.json` file or edit the configuration `config.js.common.mainBowerFiles.overrides` value. See [main-bower-files] docs.
+If you want to skip any of the Bower packages, use the `overrides` option in the `bower.json` file or edit the configuration `config.js.common.mainBowerFiles.overrides` value. See [main-bower-files] docs.
 
 
 

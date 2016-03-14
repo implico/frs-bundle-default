@@ -4,7 +4,7 @@ This is a bundle for [Frontend-starter][frontend-starter] with default directory
 
 
 ## Installation
-Clone [Frontend-starter][frontend-starter], then create a directory named `app` and unpack/clone this repo into. Then run (in the `app` directory):
+Clone [Frontend-starter][frontend-starter], then create a directory named `app` and unpack this repo into (if you clone, you'd rather want to remove the `.git` directory to avoid an accidental pull from the origin). Then run (in the `app` directory):
 
 ```
 bower install

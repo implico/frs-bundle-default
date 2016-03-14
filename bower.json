@@ -11,17 +11,8 @@
   },
 
   "overrides": {
-      "meyer-reset": {
-        "ignore": true
-      },
-      "compass-breakpoint": {
-          "ignore": true
-      },
-      "sass-core": {
-          "ignore": true
-      },
-      "html5shiv": {
-          "ignore": true
-      }
+    "html5shiv": {
+      "ignore": true
+    }
   }
 }

@@ -4,7 +4,7 @@ This is a bundle for [Frontend-starter][frontend-starter] with default directory
 
 
 ## Installation
-Install [Frontend-starter][frontend-starter], then create a directory named `fs-app` **at the same level** (not in) and unpack this repo into (if you clone, you'd rather want to remove the `.git` directory to avoid an accidental pull from the origin). Then run (in the `fs-app` directory):
+Install [Frontend-starter][frontend-starter], then create a directory named `fs-app` **at the same level** (as a sibling) and unpack this repo into (if you clone, you'd rather want to remove the `.git` directory to avoid an accidental pull from the origin). Then run (in the `fs-app` directory):
 
 ```
 bower install

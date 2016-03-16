@@ -9,7 +9,7 @@ Before start you need:
 * [Bower][bower]
 * Git, e.g. [Github desktop](https://desktop.github.com/)
 
-Install [Frontend-starter][frontend-starter], then unpack this repo to the desired loaction (if you clone, you'd rather want to remove the `.git` directory, because as it is just a kind of template, it won't be under version control). Remember **not to use a directory containing an exclamation mark (!)** - it breaks glob patterns used by the tasks.
+Install [Frontend-starter][frontend-starter], then unpack this repo to the desired project location (if you clone, you'd rather want to remove the `.git` directory, because as it is just a kind of template, it won't be under version control). Remember **not to use a directory containing an exclamation mark (!)** - it breaks glob patterns used by the tasks.
 
 Then run:
 
@@ -19,7 +19,7 @@ bower install
 
 On Windows, remember to run Bower from Git Shell.
 
-Then use the [Frontend-starter gulp tasks](https://github.com/implico/frontend-starter#cli-tasks). So, for the first init, use:
+Then use the [Frontend-starter gulp tasks](https://github.com/implico/frontend-starter#cli-tasks). For example, for the first init, use:
 
 ```
 frs dev
@@ -80,6 +80,7 @@ You can inject custom code using blocks - by default there are 3 of them:
 
 
 
+[bower]: http://bower.io/
 [frontend-starter]: https://github.com/implico/frontend-starter
 [gulp-spritesmith]: https://github.com/twolfson/gulp.spritesmith
 [gulp-swig]: https://github.com/colynb/gulp-swig

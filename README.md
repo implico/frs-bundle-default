@@ -4,7 +4,14 @@ This is a bundle for [Frontend-starter][frontend-starter] with default directory
 
 
 ## Installation
-Install [Frontend-starter][frontend-starter], then create a directory named `fs-app` **at the same level** (as a sibling) and unpack this repo into (if you clone, you'd rather want to remove the `.git` directory to avoid an accidental pull from the origin). Then run (in the `fs-app` directory):
+
+Before start you need:
+* [Bower][bower]
+* Git, e.g. [Github desktop](https://desktop.github.com/)
+
+Install [Frontend-starter][frontend-starter], then unpack this repo to the desired loaction (if you clone, you'd rather want to remove the `.git` directory, because as it is just a kind of template, it won't be under version control). Remember **not to use a directory containing an exclamation mark (!)** - it breaks glob patterns used by the tasks.
+
+Then run:
 
 ```
 bower install
@@ -12,7 +19,13 @@ bower install
 
 On Windows, remember to run Bower from Git Shell.
 
-Then use the gulp tasks (run from the [Frontend-starter][frontend-starter] directory). **To fully customize directory structure**, see the [docs config section](https://github.com/implico/frontend-starter#directories-and-configuration).
+Then use the [Frontend-starter gulp tasks](https://github.com/implico/frontend-starter#cli-tasks). So, for the first init, use:
+
+```
+frs dev
+```
+
+**To fully customize directory structure**, see the [docs config section](https://github.com/implico/frontend-starter#directories-and-configuration).
 
 
 <br>

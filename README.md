@@ -17,7 +17,7 @@ Then run:
 bower install
 ```
 
-On Windows, remember to run Bower from Git Shell.
+On Windows, remember to run Bower from Git Shell. Bower files are by default placed in `bower_components` - to change this, edit the `.bowercc` file and change `dirs.vendor` config definition.
 
 Then use the [Frontend-starter gulp tasks](https://github.com/implico/frontend-starter#cli-tasks). For example, for the first init, use:
 
@@ -25,11 +25,11 @@ Then use the [Frontend-starter gulp tasks](https://github.com/implico/frontend-s
 frs dev
 ```
 
-**To fully customize directory structure**, see the [docs config section](https://github.com/implico/frontend-starter#directories-and-configuration).
+**To fully customize directory structure** and other parameters, see the [docs config section](https://github.com/implico/frontend-starter#directories-and-configuration).
 
 
 <br>
-## Directory structure
+## Directory structure of the `src/`:
 
 ### Fonts: `/fonts`
 Font files for font-face generation.

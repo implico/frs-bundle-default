@@ -36,8 +36,8 @@
   	</div>
 
     {# 
-        Use when config.js.common.concatAppVendor is false
-        <script src="js/vendor.js"></script>
+        Use when config.js.common.concatVendorApp is false
+        <script src="js/app.vendor.js"></script>
     #}
     <script src="js/app.js"></script>
   </body>

@@ -23,7 +23,7 @@
     
   <body{% block bodyAttr %}{% endblock bodyAttr %}>
 
-  	<div id="layout-main-wrap">
+    <div id="layout-main-wrap">
 
       {% include "partials/header.swig" %}
 
@@ -33,7 +33,7 @@
 
       {% include "partials/footer.swig" %}
 
-  	</div>
+    </div>
 
     {# 
         Use when config.js.common.concatVendorApp is false

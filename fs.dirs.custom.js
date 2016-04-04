@@ -9,18 +9,29 @@ module.exports = function(dirs, mode) {
       //dirs.src.main = dirs.app + 'source_dir/';
       break;
 
-    //invoked after setting the dist dir (set custom dist dir here)
+    //invoked after setting the dist dir (change particular src subdirectories and/or set custom dist dir here)
     case 'dist':
-      //e.g.
-      //dirs.dist.main = dirs.app + 'public_html/';
+      //change src images subdirectory from "img" to "images"
+      //dirs.src.img = dirs.src.main + 'images/';
+
+      //change dist directory to "../public_html"
+      //dirs.dist.main = dirs.app + '../public_html/';
       break;
 
-    //invoked after setting all dirs (set custom dir modifications/definitions here)
+    //invoked after setting all dirs (change particular dist subdirectories and/or set custom dir modifications/definitions here)
     case 'all':
+      //change dist JS subdirectory from "js" to "scripts"
+      // dirs.dist.js = dirs.dist.main + 'scripts/';
 
-      //end of code: uncomment if you change the Bower vendor dir to update html5shiv source dir
-      // if (dirs.custom.html5shiv)
-      //   dirs.custom.html5shiv.from = dirs.vendor + 'html5shiv/dist/html5shiv.min.js';
+      //watch and copy contents of "php" dir from src to dist
+      /*
+      dirs.custom.documents = {
+        dev: true,    //copied also for dev tasks
+        clean: true,  //deletes the directory on clean task
+        from: dirs.src.main + 'php/**' + '/*.php',
+        to: dirs.dist.main + 'php/'  //set to null to just watch the dir without copying (e.g. external backend views)
+      }
+      */
       break;
   }
 }

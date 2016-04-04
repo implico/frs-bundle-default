@@ -8,11 +8,5 @@
 
     "html5shiv": "*",
     "jquery": "1.*.*"
-  },
-
-  "overrides": {
-    "html5shiv": {
-      "ignore": true
-    }
   }
 }

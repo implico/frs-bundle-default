@@ -18,13 +18,13 @@ module.exports = function(config, dirs) {
 
   //add a sprites item (for directory "img/sprites-home")
   /*
-  config.sprites.item.push({
+  config.sprites.items.push({
     imgSource: dirs.src.img + 'sprites-home/',
     imgDest: dirs.dist.img,
     options: {
       imgName: 'sprites-home.png',
       imgPath: '../img/sprites-home.png',
-      cssName: '_sprites-home.scss',
+      cssName: '_sprites-home.scss',  //remember to include in your stylesheets
     }
   });
   */

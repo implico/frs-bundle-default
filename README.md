@@ -50,7 +50,7 @@ If you want to skip any of the Bower packages, use the `overrides` option in the
 
 
 ### Styles: `/styles`
-A simple direcotry structure is taken from [SASS-starter (see the docs)][sass-starter].
+A simple directory structure is taken from [SASS-starter (see the docs)][sass-starter].
 
 By default, [meyer-reset] is included. Additionally, [SASS-core][sass-core] mixins and functions are available.
 

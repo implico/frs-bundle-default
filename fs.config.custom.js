@@ -40,11 +40,15 @@ module.exports = function(config, dirs) {
   //enable JSHint
   // config.js.common.jsHint = true;
 
-  //handy main references
+  //change sourcemaps root
+  // config.js.common.sourceMapsRoot = '/src/';
+
+
+  //handy comps references
   var comps = config.js.common.comps,
       compMain = comps.main;
 
-  //main JS: change filename
+  //main JS: change filename to script.js
   // compMain.filename = 'script.js';
 
   //main JS: add prioritized files
@@ -82,7 +86,7 @@ module.exports = function(config, dirs) {
     Views example
   *********************/
 
-  //disable Swig
+  //disable Swig - remember to change views dir settings (see appropriate example in dir config file)
   // config.views.common.useSwig = false;
 
 

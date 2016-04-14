@@ -12,7 +12,7 @@ module.exports = function(dirs, mode) {
     //invoked after setting the dist dir (change particular src subdirectories and/or set custom dist dir here)
     case 'dist':
       //when removing Swig support
-      dirs.src.views.scripts = dirs.src.views.main;
+      // dirs.src.views.scripts = dirs.src.views.main;
 
       //change src images subdirectory from "img" to "images"
       // dirs.src.img = dirs.src.main + 'images/';

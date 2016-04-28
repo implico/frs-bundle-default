@@ -16,6 +16,11 @@ module.exports = function(config, dirs) {
     Sprites example
   *********************/
 
+  //modify default sprites item - example for animations
+  // config.sprites.items[0].options.algorithm = 'left-right';
+  // config.sprites.items[0].options.algorithmOpts = { sort: false };
+
+
   //add a sprites item (for directory "img/sprites-home")
   /*
   config.sprites.items.push({
@@ -25,6 +30,10 @@ module.exports = function(config, dirs) {
       imgName: 'sprites-home.png',
       imgPath: '../img/sprites-home.png',
       cssName: '_sprites-home.scss',  //remember to include in your stylesheets
+      cssSpritesheetName: 'spritesheet-home',
+      cssVarMap: function (sprite) {
+        sprite.name = 'sprite-home_' + sprite.name;
+      }            
     }
   });
   */
@@ -91,15 +100,25 @@ module.exports = function(config, dirs) {
 
 
   /********************
+    Images example
+  *********************/
+
+  //change imagemin optimization level
+  // config.images.imagemin.optimizationLevel = 4;
+
+
+  /********************
     Browsersync example
   *********************/
 
   //handy browser sync options reference
   var browserSyncOpts = config.browserSync.common.options;
 
+  // browserSyncOpts.host = 'website.localhost.com';
+  // browserSyncOpts.port = 81;
+
   //set proxy
   // browserSyncOpts.server = false;
-  // browserSyncOpts.host = 'website.localhost.com';
   // browserSyncOpts.open = 'external';
   // browserSyncOpts.proxy = 'proxy.localhost.com';
 

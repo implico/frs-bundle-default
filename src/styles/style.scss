@@ -20,10 +20,5 @@
 
 
 //layout
-@import '_pages/layout';
-@import '_partials/header';
-@import '_partials/footer';
-
-
-//subpages
-@import '_pages/index';
+@import '_pages/**/*';
+@import '_partials/**/*';

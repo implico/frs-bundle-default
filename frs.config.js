@@ -1,12 +1,16 @@
 //custom config options
 module.exports = function(config, dirs) {
 
+  //require a core module
+  //var extend = require(dirs.rootModules + 'extend');
+
+
   /********************
     Styles example
   *********************/
 
   //change sourcemaps root
-  // config.styles.common.sourceMapsRoot = '/src/';
+  // config.styles.sourceMapsRoot = '/src/';
 
   //enable sourcemaps for prod
   // config.styles.prod.sourceMaps = true;
@@ -44,17 +48,24 @@ module.exports = function(config, dirs) {
   *********************/
 
   //store vendor and app code in separate files
-  // config.js.common.concatVendorApp = false;
-
-  //enable JSHint
-  // config.js.common.jsHint = true;
+  // config.js.concatVendorApp = false;
 
   //change sourcemaps root
-  // config.js.common.sourceMapsRoot = '/src/';
+  // config.js.sourceMapsRoot = '/src/';
+
+  //enable lint
+  // config.js.inject.lint = true;
+
+  //allow build even if lint errored
+  // config.js.inject.lintFailAfterError = false;
+
+  //disable Babel
+  // config.js.inject.babel = false;
+  // config.lint.options.parserOptions.ecmaVersion = 5;
 
 
   //handy comps references
-  var comps = config.js.common.comps,
+  var comps = config.js.comps,
       compMain = comps.main;
 
   //main JS: change filename to script.js
@@ -64,8 +75,15 @@ module.exports = function(config, dirs) {
   // compMain.priority.vendor = ['carousel.js'];
   // compMain.priority.app = ['core.js', 'app/init.js'];
 
-  //add a comp
-  // comp.comp_name = {
+  //add a html5shiv comp (add a dependency in in your bower.json file first)
+  // comps.html5shiv = {
+  //   bower: ['html5shiv'],
+  //   excludeIn: true,
+  //   watch: false
+  // }
+
+  //add a comp (full parameters)
+  // comps.comp_name = {
   //   filename: 'comp_filename',      //set to false to not produce any output file (for sub-comps); if not set, defaults to comp id
 
   //   bower: ['**/*.js'],   //set only name of the package
@@ -95,8 +113,30 @@ module.exports = function(config, dirs) {
     Views example
   *********************/
 
-  //disable Swig - remember to change views dir settings (see appropriate example in dir config file)
-  // config.views.common.useSwig = false;
+  //enable swig templating engine
+  //first run: npm i gulp-swig -S
+  var swig = require('gulp-swig');
+  //change src glob to scripts dir
+  config.views.inject.src = function() {
+    return [dirs.src.views + 'scripts/**/*'];
+  }
+  //replace gulp-changed plugin with gulp-swig
+  config.views.inject.limit = function(stream) {
+    stream = stream.pipe(swig({
+      defaults: { cache: false },
+      setup: function(swig) {
+        swig.setDefaults({
+          //set base dir to layouts, thanks to this you can use e.g. {% extends "default.swig" %}
+          loader: swig.loaders.fs(dirs.src.views + 'layouts')
+        });
+      },
+      //variable context (data) passed to all templates
+      data: {}
+    }));
+
+    this.cancel();
+    return stream;
+  }
 
 
   /********************
@@ -112,7 +152,7 @@ module.exports = function(config, dirs) {
   *********************/
 
   //handy browser sync options reference
-  var browserSyncOpts = config.browserSync.common.options;
+  var browserSyncOpts = config.browserSync.options;
 
   // browserSyncOpts.host = 'website.localhost.com';
   // browserSyncOpts.port = 81;
@@ -127,7 +167,7 @@ module.exports = function(config, dirs) {
     Clean example
   *********************/
 
-  //disable fonts dir cleaning
-  // config.clean.fonts = false;
+  //disable images dir cleaning
+  // config.clean.inject.images = false;
 
 }

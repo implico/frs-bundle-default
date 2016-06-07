@@ -6,7 +6,6 @@
     "compass-breakpoint": "2.*.*",
     "sass-core": "*",
 
-    "html5shiv": "*",
-    "jquery": "1.*.*"
+    "jquery": "2.*.*"
   }
 }

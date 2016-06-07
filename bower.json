@@ -1,6 +1,7 @@
 {
   "name": "fs-bundle-default",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
     "meyer-reset": "*",
     "compass-breakpoint": "2.*.*",

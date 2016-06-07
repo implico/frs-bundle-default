@@ -66,17 +66,7 @@ You can generate multiple, separate sprite files - see the [Frontend-starter con
 
 
 ### Views: `/views`
-Thanks to the [Swig plugin][gulp-swig], you can use features brought by this templating system: extending layouts, including partials, variables/if and for blocks/macros and so on. See the [docs][swig-docs].
-
-The proposed structure is:
-* `views/layouts`: contains layout templates (i.e. common markup for all views, like header and footer). Usually there is only one layout.
-* `views/scripts`: contains script (particular pages) templates. Scripts [extend](http://twig.sensiolabs.org/doc/tags/extends.html) layouts.
-
-You can inject custom code using blocks - by default there are 3 of them:
-* `content` - page content
-* `headTitle` - page title in the &lt;head&gt; section
-* `bodyAttr` - attributes appended to the &lt;body&gt; tag
-
+See [examples](examples/) to enable [Swig][gulp-swig] support.
 
 
 
@@ -88,4 +78,3 @@ You can inject custom code using blocks - by default there are 3 of them:
 [meyer-reset]: https://github.com/adamstac/meyer-reset
 [sass-core]: https://github.com/implico/sass-core
 [sass-starter]: https://github.com/implico/sass-starter
-[swig-docs]: http://paularmstrong.github.io/swig/docs/

@@ -1,8 +1,9 @@
 //custom config options
 module.exports = function(config, dirs) {
 
-  //require a core module
+  //require a module from core
   //var extend = require(dirs.rootModules + 'extend');
+
 
 
   /********************
@@ -14,6 +15,28 @@ module.exports = function(config, dirs) {
 
   //enable sourcemaps for prod
   // config.styles.prod.sourceMaps = true;
+
+  //change autoprefixer options
+  // config.styles.autoprefixer.remove = false;
+
+  //change cssnano options
+  // config.styles.cssnano.safe = false;
+
+  //inject - disable group-css-media-queries plugin
+  // config.styles.inject.optimizeMediaQueries = false;
+
+
+
+  /********************
+    Fonts example
+  *********************/
+
+  //inject - add a middleware plugin before writing the output
+  // var myPlugin = require('my-plugin');
+  // config.fonts.inject.dest = function(stream) {
+  //   return stream.pipe(myPlugin());
+  // };
+
 
 
   /********************
@@ -41,6 +64,7 @@ module.exports = function(config, dirs) {
     }
   });
   */
+
 
 
   /********************
@@ -109,35 +133,6 @@ module.exports = function(config, dirs) {
   // }
 
 
-  /********************
-    Views example
-  *********************/
-
-  //enable swig templating engine
-  //first run: npm i gulp-swig -S
-  var swig = require('gulp-swig');
-  //change src glob to scripts dir
-  config.views.inject.src = function() {
-    return [dirs.src.views + 'scripts/**/*'];
-  }
-  //replace gulp-changed plugin with gulp-swig
-  config.views.inject.limit = function(stream) {
-    stream = stream.pipe(swig({
-      defaults: { cache: false },
-      setup: function(swig) {
-        swig.setDefaults({
-          //set base dir to layouts, thanks to this you can use e.g. {% extends "default.swig" %}
-          loader: swig.loaders.fs(dirs.src.views + 'layouts')
-        });
-      },
-      //variable context (data) passed to all templates
-      data: {}
-    }));
-
-    this.cancel();
-    return stream;
-  }
-
 
   /********************
     Images example
@@ -147,6 +142,36 @@ module.exports = function(config, dirs) {
   // config.images.imagemin.optimizationLevel = 4;
 
 
+
+  /********************
+    Views example
+  *********************/
+
+  //change htmlmin options
+  // config.views.htmlmin.collapseWhitespace = false;
+
+  //disable htmlmin
+  // config.views.inject.optimize = false;
+
+
+
+  /********************
+    Lint example
+  *********************/
+
+  //change eslint options - add allowed globals
+  // config.lint.options.globals = {
+  //   angular: false
+  // }
+
+  //change eslint options - customize rules
+  // config.lint.options.rules = {
+  //   'quotes': [2, 'single'],
+  //   'comma-dangle': [2, 'only-multiline']
+  // }
+
+
+
   /********************
     Browsersync example
   *********************/
@@ -154,13 +179,14 @@ module.exports = function(config, dirs) {
   //handy browser sync options reference
   var browserSyncOpts = config.browserSync.options;
 
-  // browserSyncOpts.host = 'website.localhost.com';
+  // browserSyncOpts.host = 'website.local';
   // browserSyncOpts.port = 81;
 
   //set proxy
   // browserSyncOpts.server = false;
   // browserSyncOpts.open = 'external';
-  // browserSyncOpts.proxy = 'proxy.localhost.com';
+  // browserSyncOpts.proxy = 'proxy.local';
+
 
 
   /********************

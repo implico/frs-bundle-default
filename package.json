@@ -1,0 +1,22 @@
+{
+  "name": "frs-bundle-default",
+  "description": "Default bundle for Frontend-starter.",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Bartosz Sak",
+    "email": "bartosz.sak@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/implico/frs-bundle-default.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

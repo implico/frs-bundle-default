@@ -42,7 +42,7 @@ Your images, that will be optimized and saved in the dist directory . `img/sprit
 ### Javascript: `/js`
 All your JavaScript files (including those installed with Bower) are by default concatenated into one file: `app.js`. Thanks to this, you don't have to change markup when adding/removing any files or packages.
 
-`js/vendor` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
+`js/_vendor` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
 
 If you want to skip any of the Bower packages, use the `overrides` option in the `bower.json` file or edit the configuration `config.js.common.mainBowerFiles.overrides` value. See [main-bower-files] docs.
 

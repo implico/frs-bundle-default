@@ -42,7 +42,7 @@ Your images, that will be optimized and saved in the dist directory . `img/sprit
 ### Javascript: `/js`
 All your JavaScript files (including those installed with Bower) are by default concatenated into one file: `app.js`. Thanks to this, you don't have to change markup when adding/removing any files or packages.
 
-`js/_vendor` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
+`/vendor/js` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
 
 If you want to skip any of the Bower packages, use the `overrides` option in the `bower.json` file or edit the configuration `config.js.common.mainBowerFiles.overrides` value. See [main-bower-files] docs.
 
@@ -57,6 +57,9 @@ By default, [meyer-reset] is included. Additionally, [SASS-core][sass-core] mixi
 If you don't need any them:
 * remove the dependency from the `bower.json` file
 * remove import from `styles/style.scss`
+
+Place any third-party scripts that you can't or don't want to install via Bower in `/vendor/styles`.
+
 
 <a name="styles-sprites"></a>
 #### Sprites

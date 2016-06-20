@@ -2,13 +2,14 @@
 @import 'config/variables';
 
 //vendor - Bower
+//REMOVE IF YOU ARE NOT USING ANY OF THE FOLLOWING LIBS
+//otherwise, update the path to your actual Bower dir path (if app dir changed), set variables used by them in previously imported file (recommended config/variables)
 @import '../../bower_components/meyer-reset/stylesheets/meyer-reset';
 @import '../../bower_components/compass-breakpoint/stylesheets/breakpoint';
-//REMOVE IF YOU ARE NOT USING SASS-CORE FRAMEWORK
-//otherwise, update the path to your actual Bower dir path (if app dir changed), customize variables in previously imported file (e.g. variables)
 @import '../../bower_components/sass-core/dist/sass-core';
 
-//vendor - inline example (update path to actual)
+//vendor - inline
+//example (update path to actual)
 //@import '../../vendor/styles/some-lib/lib';
 
 //custom config
@@ -17,7 +18,7 @@
 @import 'config/fonts';
 
 
-//sprites - uncomment if used
+//sprites - uncomment and customize if used
 //@import 'sprites/sprites';
 
 

@@ -43,24 +43,28 @@ module.exports = function(config, dirs) {
     Sprites example
   *********************/
 
-  //modify default sprites item - example for animations
+  //modify default sprites item - example for animations (change Spritesmith algorithm options)
   // config.sprites.items[0].options.algorithm = 'left-right';
   // config.sprites.items[0].options.algorithmOpts = { sort: false };
 
 
-  //add a sprites item (for directory "img/sprites-home")
+  //add a sprites item - full options (any option omitted will receive a default value)
   /*
   config.sprites.items.push({
-    imgSource: dirs.src.img + 'sprites-home/',
-    imgDest: dirs.dist.img,
+    name: 'name',                                     //sprite base name, the only required parameter
+    src: dirs.src.sprites.main + 'name/**' + '/*.*',  //source dir, concat used just to avoid comment ending
+    dest: dirs.dist.sprites,                          //dest dir
+    varPrepend: 'name-',                              //prepended before SASS sprite variable name
+
+    //Spritesmith options
     options: {
-      imgName: 'sprites-home.png',
-      imgPath: '../img/sprites-home.png',
-      cssName: '_sprites-home.scss',  //remember to include in your stylesheets
-      cssSpritesheetName: 'spritesheet-home',
+      imgName: 'name.png',                    //output sprite image name
+      imgPath: '../img/name.png',             //path to the output image relative to the CSS file
+      cssName: '_name.scss',                  //name of the output SASS file created in the styles dir
+      cssSpritesheetName: 'spritesheet-name', //stylesheet is a SASS map containing info about all sprite images
       cssVarMap: function (sprite) {
-        sprite.name = 'sprite-home_' + sprite.name;
-      }            
+        sprite.name = 'name-' + sprite.name;  //sprite variable builder
+      }
     }
   });
   */
@@ -149,9 +153,39 @@ module.exports = function(config, dirs) {
 
   //change htmlmin options
   // config.views.htmlmin.collapseWhitespace = false;
+  // config.views.htmlmin.removeComments = false;
+
 
   //disable htmlmin
   // config.views.inject.optimize = false;
+
+
+
+  /********************
+    Custom dirs example
+  *********************/
+
+  //watch and copy contents of "php" dir from src to dist
+  /*
+  config.customDirs.items.push({
+    name: 'php views',  //optional, displayed in the console during watch
+    src: dirs.src.main + 'php/**' + '/*.php',
+    dest: dirs.dist.main + 'php/',  //set to null to just watch the dir without copying (e.g. external backend views)
+    inject: {
+      //main task, receives stream and { dirInfo } as a second parameter
+      src: true,   //function must return: a stream (if canceled) or a glob array passed to the src
+      limit: true, //gulp-changed plugin
+      dest: true,
+
+      //watch task, receives undefined and { id, dirInfo } with id and definition as a second parameter
+      watch: true,
+
+      //clean task, receives current glob to delete (see the clean task injector docs) and { dirInfo } with definition object as a second parameter
+      //not needed to disable if "dest" is null
+      clean: true
+    }
+  });
+*/
 
 
 

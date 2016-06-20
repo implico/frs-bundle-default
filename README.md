@@ -22,7 +22,7 @@ On Windows, remember to run Bower from Git Shell. Bower files are by default pla
 Then use the [Frontend-starter gulp tasks](https://github.com/implico/frontend-starter#cli-tasks). For example, for the first init, use:
 
 ```
-frs dev
+frs start
 ```
 
 **To fully customize directory structure** and other parameters, see the [docs config section](https://github.com/implico/frontend-starter#directories-and-configuration).
@@ -39,22 +39,29 @@ Font files for font-face generation.
 Your images, that will be optimized and saved in the dist directory . `img/sprites` is the default directory for sprites (see more in the [Sprites](#styles-sprites) section).
 
 
+### Sprites: `/sprites`
+Image sprites, see more in the [Sprites](#styles-sprites) section.
+
+
 ### Javascript: `/js`
 All your JavaScript files (including those installed with Bower) are by default concatenated into one file: `app.js`. Thanks to this, you don't have to change markup when adding/removing any files or packages.
+
+By default, [jQuery](https://jquery.com/)@2 is installed.
 
 `/vendor/js` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
 
 If you want to skip any of the Bower packages, use the `overrides` option in the `bower.json` file or edit the configuration `config.js.common.mainBowerFiles.overrides` value. See [main-bower-files] docs.
 
 
-
-
 ### Styles: `/styles`
 A simple directory structure is taken from [SASS-starter (see the docs)][sass-starter].
 
-By default, [meyer-reset] is included. Additionally, [SASS-core][sass-core] mixins and functions are available.
+By default, the following libraries are included:
+- [meyer-reset] - provides CSS reset
+- [Breakpoint](http://breakpoint-sass.com/) for convenient media queries handling
+- [SASS-core][sass-core] - mixins and functions such as: automatic rem/vw/percentage unit converters for dimensions and fonts, responsive sprites, grids
 
-If you don't need any them:
+If you don't need any of them:
 * remove the dependency from the `bower.json` file
 * remove import from `styles/style.scss`
 
@@ -63,9 +70,7 @@ Place any third-party scripts that you can't or don't want to install via Bower 
 
 <a name="styles-sprites"></a>
 #### Sprites
-Sprites are generated automatically by [gulp-spritesmith] for all images placed in the `img/sprites` directory. To use a sprite, you have to uncomment the line in style.scss with sprites sheet import. See more in [SASS-core][sass-core] docs.
-
-You can generate multiple, separate sprite files - see the [Frontend-starter configuration section][frontend-starter] section.
+Sprites are generated automatically by [gulp-spritesmith] for all images placed in the `/sprites` directory. To use a sprite, you have to uncomment the line in `style.scss` with sprite sheet import and then use the mixin `@include sprite($filename)`. See more in [Frontend-starter configuration section][frontend-starter] and [SASS-core][sass-core] docs.
 
 
 ### Views: `/views`

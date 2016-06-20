@@ -1,7 +1,7 @@
 //custom tasks definitions
 module.exports = function(appData) {
   //remove views task
-  // appData.app.taskReg.removeTask('views');
+  // appData.app.taskRegUtils.removeTask('views');
 
   //create a task
   /*appData.taskReg['copy'] = {
@@ -11,6 +11,6 @@ module.exports = function(appData) {
     }
   }
   //add the task as a dependency: build task, before images dependency
-  appData.app.taskReg.addDep('copy', 'build', 'images', true);*/
+  appData.app.taskRegUtils.addDep('copy', 'build', 'images', true);*/
 
 }

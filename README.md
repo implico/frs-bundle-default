@@ -70,7 +70,7 @@ Place any third-party scripts that you can't or don't want to install via Bower 
 
 <a name="styles-sprites"></a>
 #### Sprites
-Sprites are generated automatically by [gulp-spritesmith] for all images placed in the `/sprites` directory. To use a sprite, you have to uncomment the line in `style.scss` with sprite sheet import and then use the mixin `@include sprite($filename)`. See more in [Frontend-starter docs](https://github.com/implico/frontend-starter#sprites) and [SASS-core][sass-core] docs.
+Sprites are generated automatically by [gulp-spritesmith] for all images placed in the `/sprites` directory. To use a sprite, you have to uncomment the line in `style.scss` with sprite sheet import and then use the mixin `@include sprite($filename)`. See more in [Frontend-starter sprite docs](https://github.com/implico/frontend-starter#sprites) and [SASS-core docs][sass-core].
 
 
 ### Views: `/views`

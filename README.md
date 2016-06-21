@@ -36,7 +36,7 @@ Font files for font-face generation.
 
 
 ### Images: `/img`
-Your images, that will be optimized and saved in the dist directory . `img/sprites` is the default directory for sprites (see more in the [Sprites](#styles-sprites) section).
+Your images, that will be optimized and saved in the dist directory.
 
 
 ### Sprites: `/sprites`
@@ -50,11 +50,13 @@ By default, [jQuery](https://jquery.com/)@2 is installed.
 
 `/vendor/js` contains third-party scripts, that you can't or don't want to install via Bower - they are watched and handled separately and prepended to the `app.js` file.
 
-If you want to skip any of the Bower packages, use the `overrides` option in the `bower.json` file or edit the configuration `config.js.common.mainBowerFiles.overrides` value. See [main-bower-files] docs.
+If you want to skip any of the Bower packages, you have 2 options:
+- create a [comp](https://github.com/implico/frontend-starter#javascript-compositions) that uses selected packages, set its `filename` to `null` and `excludeIn` to `true`
+- use the `overrides` option in `bower.json` file or edit configuration `config.js.mainBowerFiles.overrides` value (see [main-bower-files] docs).
 
 
 ### Styles: `/styles`
-A simple directory structure is taken from [SASS-starter (see the docs)][sass-starter].
+A simple directory structure is taken from [SASS-starter][sass-starter].
 
 By default, the following libraries are included:
 - [meyer-reset] - provides CSS reset

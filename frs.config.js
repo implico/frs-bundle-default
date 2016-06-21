@@ -172,7 +172,7 @@ module.exports = function(config, dirs) {
     src: dirs.src.main + 'php/**' + '/*.php',
     dest: dirs.dist.main + 'php/',  //set to null to just watch the dir without copying (e.g. external backend views)
     inject: {
-      //main task, receives stream and { dirInfo } as a second parameter
+      //an object { dirInfo } (with this config) available as this.taskData from within inject functions
       src: true,   //function must return: a stream (if canceled) or a glob array passed to the src
       limit: true, //gulp-changed plugin
       dest: true,
@@ -193,12 +193,12 @@ module.exports = function(config, dirs) {
     Lint example
   *********************/
 
-  //change eslint options - add allowed globals
+  //change ESLint options - add allowed globals
   // config.lint.options.globals = {
   //   angular: false
   // }
 
-  //change eslint options - customize rules
+  //change ESLint options - customize rules
   // config.lint.options.rules = {
   //   'quotes': [2, 'single'],
   //   'comma-dangle': [2, 'only-multiline']

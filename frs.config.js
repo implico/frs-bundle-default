@@ -43,6 +43,9 @@ module.exports = function(config, dirs) {
     Sprites example
   *********************/
 
+  //modify default sprites item - example for responsive sprites
+  // config.sprites.items[0].options.algorithm = 'diagonal';
+
   //modify default sprites item - example for animations (change Spritesmith algorithm options)
   // config.sprites.items[0].options.algorithm = 'left-right';
   // config.sprites.items[0].options.algorithmOpts = { sort: false };
@@ -53,7 +56,7 @@ module.exports = function(config, dirs) {
   config.sprites.items.push({
     name: 'name',                                     //sprite base name, the only required parameter
     src: dirs.src.sprites.main + 'name/**' + '/*.*',  //source dir, concat used just to avoid comment ending
-    dest: dirs.dist.sprites,                          //dest dir
+    dest: dirs.dist.sprites,                          //dest dir, set to null to ignore
     varPrepend: 'name-',                              //prepended before SASS sprite variable name
 
     //Spritesmith options
@@ -210,16 +213,16 @@ module.exports = function(config, dirs) {
     Browsersync example
   *********************/
 
-  //handy browser sync options reference
-  var browserSyncOpts = config.browserSync.options;
+  //handy Browsersync options reference
+  var bsOpts = config.browsersync.options;
 
-  // browserSyncOpts.host = 'website.local';
-  // browserSyncOpts.port = 81;
+  // bsOpts.host = 'website.local';
+  // bsOpts.port = 81;
 
   //set proxy
-  // browserSyncOpts.server = false;
-  // browserSyncOpts.open = 'external';
-  // browserSyncOpts.proxy = 'proxy.local';
+  // bsOpts.server = false;
+  // bsOpts.open = 'external';
+  // bsOpts.proxy = 'proxy.local';
 
 
 

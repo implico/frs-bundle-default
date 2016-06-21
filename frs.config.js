@@ -214,7 +214,7 @@ module.exports = function(config, dirs) {
   *********************/
 
   //handy Browsersync options reference
-  var bsOpts = config.browsersync.options;
+  var bsOpts = config.browserSync.options;
 
   // bsOpts.host = 'website.local';
   // bsOpts.port = 81;

@@ -64,7 +64,7 @@ module.exports = function(config, dirs) {
       imgName: 'name.png',                    //output sprite image name
       imgPath: '../img/name.png',             //path to the output image relative to the CSS file
       cssName: '_name.scss',                  //name of the output SASS file created in the styles dir
-      cssSpritesheetName: 'spritesheet-name', //stylesheet is a SASS map containing info about all sprite images
+      cssSpritesheetName: 'name-spritesheet', //stylesheet is a SASS map containing info about all sprite images
       cssVarMap: function (sprite) {
         sprite.name = 'name-' + sprite.name;  //sprite variable builder
       }
@@ -84,7 +84,7 @@ module.exports = function(config, dirs) {
   //change sourcemaps root
   // config.js.sourceMapsRoot = '/src/';
 
-  //enable lint
+  //enable lint on change
   // config.js.inject.lint = true;
 
   //allow build even if lint errored

@@ -7,7 +7,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Styles example
+    Styles
   *********************/
 
   //change sourcemaps root
@@ -22,13 +22,13 @@ module.exports = function(config, dirs) {
   //change cssnano options
   // config.styles.cssnano.safe = false;
 
-  //inject - disable group-css-media-queries plugin
-  // config.styles.inject.optimizeMediaQueries = false;
+  //inject - enable group-css-media-queries plugin (disabled by default as unsafe)
+  // config.styles.inject.optimizeMediaQueries = true;
 
 
 
   /********************
-    Fonts example
+    Fonts
   *********************/
 
   //inject - add a middleware plugin before writing the output
@@ -40,7 +40,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Sprites example
+    Sprites
   *********************/
 
   //modify default sprites item - example for responsive sprites
@@ -75,7 +75,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    JS example
+    JS
   *********************/
 
   //store vendor and app code in separate files
@@ -142,7 +142,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Images example
+    Images
   *********************/
 
   //change imagemin optimization level
@@ -151,7 +151,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Views example
+    Views
   *********************/
 
   //change htmlmin options
@@ -165,7 +165,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Custom dirs example
+    Custom dirs
   *********************/
 
   //watch and copy contents of "php" dir from src to dist
@@ -193,7 +193,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Lint example
+    Lint
   *********************/
 
   //change ESLint options - add allowed globals
@@ -210,7 +210,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Browsersync example
+    Browsersync
   *********************/
 
   //handy Browsersync options reference
@@ -227,7 +227,7 @@ module.exports = function(config, dirs) {
 
 
   /********************
-    Clean example
+    Clean
   *********************/
 
   //disable images dir cleaning

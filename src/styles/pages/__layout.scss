@@ -1,12 +1,12 @@
 html {
 	font-family: Arial, sans-serif, Tahoma;
-
-	//UNCOMMENT IF USING SASS-CORE FRAMEWORK
-	//@include font-px(md);
 }
 
 body {
 	width: 100%;
+
+	// UNCOMMENT IF USING SASS-CORE FRAMEWORK AND PX FONT UNITS
+	//@include font-px(md);
 }
 
 *, *:before, *:after {

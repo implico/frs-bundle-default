@@ -17,7 +17,7 @@ module.exports = function(dirs, mode) {
     //change particular src/dist subdirectories
     case 'sub':
       //change src images subdirectory from "img" to "images"
-      // dirs.src.img = dirs.src.main + 'images/';
+      // dirs.src.images = dirs.src.main + 'images/';
 
       //change dist JS subdirectory from "js" to "scripts"
       // dirs.dist.js = dirs.dist.main + 'scripts/';

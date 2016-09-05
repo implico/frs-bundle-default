@@ -1,5 +1,5 @@
 //custom config options
-module.exports = function(config, dirs) {
+module.exports = function(config, dirs, appData) {
 
   //require a module from core
   //var extend = require(dirs.rootModules + 'extend');
@@ -55,8 +55,8 @@ module.exports = function(config, dirs) {
   /*
   config.sprites.items.push({
     name: 'name',                                     //sprite base name, the only required parameter
-    src: dirs.src.sprites.main + 'name/**' + '/*.*',  //source dir, concat used just to avoid comment ending
-    dest: dirs.dist.sprites,                          //dest dir, set to null to ignore
+    src: dirs.src.sprites + 'name/**' + '/*.*',       //source dir, concat used just to avoid comment ending
+    dest: dirs.dist.sprites.main,                     //dest dir, set to null to ignore
     varPrepend: 'name-',                              //prepended before SASS sprite variable name
 
     //Spritesmith options

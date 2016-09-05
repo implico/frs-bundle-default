@@ -1,4 +1,5 @@
   //enable swig templating engine
+  
   var swig = require('gulp-swig');
   //change src glob to scripts dir
   config.views.inject.src = function() {

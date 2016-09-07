@@ -1,4 +1,4 @@
-// variables
+// variables first, to override default libraries' options
 @import 'config/variables';
 
 // vendor - Bower (REMOVE IF YOU ARE NOT USING ANY OF THE FOLLOWING LIBS)
@@ -13,16 +13,18 @@
 // @import '../../vendor/styles/some-lib/lib';
 
 
-// custom config
+// config files
 @import 'config/mixins';
 @import 'config/colors';
 @import 'config/fonts';
 
 
 // sprites - uncomment if used
-// @import 'sprites/**/*';
+//@import 'sprites/**/*';
 
 
-// layout
+//components
+@import 'components/**/*';
+
+//pages
 @import 'pages/**/*';
-@import 'partials/**/*';

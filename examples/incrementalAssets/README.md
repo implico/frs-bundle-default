@@ -11,7 +11,7 @@ Optimized images cache, [TinyPNG](https://tinypng.com/) support.
   ```
 
   For TinyPNG support, run additionally:
-  
+
   ```
   npm install gulp-clone gulp-ignore gulp-tinypng merge2 --save-dev
   ```
@@ -19,8 +19,6 @@ Optimized images cache, [TinyPNG](https://tinypng.com/) support.
 
 
 ## Clean cache
-
-Use:
 
 ```
 frs clean --iaclean

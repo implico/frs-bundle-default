@@ -2,7 +2,7 @@
 <html>
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <meta charset="utf-8" />
-    <title>{% block headTitle %}{% endblock headTitle %}</title>
+    <title>{% block headTitle %}{% endblock %}</title>
     <link rel="shortcut icon" href="img/favicon.ico" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -17,7 +17,7 @@
       
   </head>
     
-  <body{% block bodyAttr %}{% endblock bodyAttr %}>
+  <body{% block bodyAttr %}{% endblock %}>
 
     <div id="layout-main-wrap">
 

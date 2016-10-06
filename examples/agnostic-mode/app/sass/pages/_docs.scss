@@ -1,0 +1,168 @@
+#page-docs {
+  .upload {
+    @include clearfix;
+    margin-bottom: 30px;
+
+    @include respond-to(tablet) {
+      margin-bottom: 40px;
+    }
+
+    .upload-button {
+      position: relative;
+      overflow: hidden;
+
+      @include respond-to(mobile-ex) {
+        margin-bottom: 12px;
+      }
+
+      @include respond-to(tablet) {
+        float: left;
+      }
+
+      input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 40px;
+        cursor: pointer;
+        opacity: 0;
+      }
+    }
+
+    .upload-info {
+      font-size: 14px;
+
+      @include respond-to(tablet) {
+        float: left;
+        width: 200px;
+        padding-left: 15px;
+        margin-top: -5px;
+      }
+    }
+  }
+
+  .doc-list {
+    .mobile {
+      @include respond-to(tablet) {
+        display: none;
+      }
+
+      .title {
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+
+      .list-labels {
+        display: inline-block;
+        height: 44px;
+        margin-bottom: 20px;
+        border: 1px solid #f0f0f2;
+        border-radius: 20px;
+        white-space: nowrap;
+
+        a {
+          position: relative;
+          display: inline-block;
+          height: 42px;
+          line-height: 42px;
+          vertical-align: middle;
+          padding-left: 30px;
+          padding-right: 40px;
+
+          text-align: center;
+
+          &.active {
+            color: #fff;
+
+            &:before {
+              position: absolute;
+              z-index: -1;
+              content: "";
+              top: -1px;
+              left: 0;
+              right: 0;
+              bottom: -1px;
+              background: $color-bg-lead;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .tablet {
+      display: none;
+
+      @include respond-to(tablet) {
+        display: block;
+      }
+
+      .list-label {
+        @include respond-to(tablet) {
+          float: left;
+          width: 50%;
+          padding: 0 0 16px 20px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .list-files {
+      @include clearfix;
+
+      .tab-pane {
+        @include respond-to(tablet) {
+          display: block !important;
+          float: left;
+          width: 50%;
+        }
+
+        li {
+          position: relative;
+          min-height: 55px;
+          padding: 13px 15px 10px 60px;
+          border-bottom: 1px solid $color-bg-2;
+          line-height: 1.2;
+
+          @include respond-to(tablet) {
+            padding-left: 75px;
+          }
+
+          &:first-child {
+            border-top: 1px solid $color-bg-2;
+          }
+
+          &:before {
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: 15px;
+            @include sprite($layout-docs-icon);
+
+            @include respond-to(tablet) {
+              left: 20px;
+            }
+          }
+
+          .file-link {
+            display: inline-block;
+            margin-bottom: 4px;
+            color: $color-2;
+            font-weight: $font-w-medium;
+            
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          time {
+            display: block;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

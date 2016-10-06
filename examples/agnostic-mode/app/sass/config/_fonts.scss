@@ -1,0 +1,5 @@
+@include sc-font-face(DinProPl, DINProPl-Regular, normal);
+@include sc-font-face(DinProPl, DINProPl-Medium, $font-w-medium);
+@include sc-font-face(DinProPl, DINProPl-Bold, bold);
+
+$font-din: DinProPl,Arial,Tahoma,sans-serif;

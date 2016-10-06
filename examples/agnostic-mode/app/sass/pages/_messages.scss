@@ -1,0 +1,120 @@
+#page-messages {
+  .message-list {
+    @include clearfix;
+    margin-bottom: 35px;
+
+    article {
+      @include clearfix;
+      margin-bottom: 20px;
+
+      .article-content {
+
+        @include respond-to(tablet) {
+          width: 500px;
+        }
+
+        .sender-label {
+          margin-bottom: 3px;
+          font-size: 12px;
+        }
+
+        p {
+          padding: 20px;
+          border: 1px solid $color-bg-lead;
+          border-radius: 7px;
+          margin-bottom: 5px;
+          font-weight: $font-w-medium;
+
+          @include respond-to(tablet) {
+            padding: 30px 40px;
+          }
+        }
+
+        time {
+          display: block;
+          font-size: 12px;
+
+          @include respond-to(tablet) {
+            padding-left: 40px;
+          }
+        }
+      }
+
+      &.answer {
+        .article-content {
+          float: right;
+
+          @include respond-to(mobile-ex) {
+            width: 90%;
+          }
+
+          time {
+            @include respond-to(tablet) {
+              padding-left: 0;
+              padding-right: 40px;
+              text-align: right;
+            }
+          }
+
+          p {
+            background: $color-bg-lead;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .submit-wrap {
+    .input-content {
+      position: relative;
+      padding: 40px 40px 20px;
+      margin-bottom: 30px;
+      background: $color-bg-3;
+
+      @include respond-to(tablet) {
+        padding: 30px 50px 10px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 26px;
+        top: 37px;
+        width: 3px;
+        height: 32px;
+        background: $color-bg-lead;
+
+        @include respond-to(tablet) {
+          left: 36px;
+          top: 27px;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 50px;
+        background: none;
+        border: none;
+
+        @include input-placeholder {
+          color: #9fa0a5;
+        }
+      }
+    }
+
+    .buttons {
+      @include respond-to(tablet) {
+        margin-left: 50px;
+      }
+
+      .comp-button--accept {
+        margin-right: 15px;
+
+        @include respond-to(mobile-ex) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

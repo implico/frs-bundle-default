@@ -1,0 +1,24 @@
+{
+  "name": "frs-agnostic-mode",
+  "description": "Frontend-starter agnostic gulpfile",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Bartosz Sak",
+    "email": "bartosz.sak@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 5.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "3.*",
+    "gulp-cssnano": "2.*",
+    "gulp-sass": "2.*",
+    "gulp-sass-glob": "1.*",
+    "gulp-sourcemaps": "^1.5.2",
+    "minimist": "^1.2.0"
+  }
+}

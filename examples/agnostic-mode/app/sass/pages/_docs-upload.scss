@@ -1,0 +1,185 @@
+#page-docs-upload {
+  .narrow-wrap {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .list-files {
+    margin-bottom: 40px;
+
+    ul {
+      margin-bottom: 20px;
+
+      li {
+        position: relative;
+        min-height: 60px;
+        padding: 21px 30px 21px 60px;
+        border-bottom: 1px solid $color-bg-2;
+        line-height: 1.2;
+        cursor: pointer;
+
+        @include respond-to(tablet) {
+          padding-left: 75px;
+          padding-right: 50px;
+        }
+
+        &:first-child {
+          border-top: 1px solid $color-bg-2;
+        }
+
+        &:before {
+          position: absolute;
+          content: "";
+          top: 12px;
+          left: 15px;
+          @include sprite($layout-docs-icon);
+
+          @include respond-to(tablet) {
+            left: 20px;
+          }
+        }
+
+        &.active, &:hover {
+          &:before {
+            @include sprite($layout-docs-icon-active);
+          }
+
+          .file-link {
+            color: $color-2;
+          }
+        }
+
+        .file-link {
+          display: inline-block;
+          color: #cccccc;
+          font-weight: $font-w-medium;
+        }
+
+        .remove-icon {
+          position: absolute;
+          top: 22px;
+          right: 7px;
+          @include sprite($layout-close);
+
+          @include respond-to(tablet) {
+            right: 20px;
+          }
+        }
+      }
+    }
+
+    .add {
+      .upload-button {
+        position: relative;
+        display: inline-block;
+        padding-left: 60px;
+        overflow: hidden;
+
+        color: $color-header;
+        font-size: 14px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 20px;
+          margin-top: -11px;
+          @include sprite($layout-add);
+        }
+
+        input {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 0;
+          padding: 0;
+          font-size: 40px;
+          cursor: pointer;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .input-wrap {
+    .subheading {
+      margin-bottom: 8px;
+
+      @include respond-to(tablet) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .input-content {
+      position: relative;
+      padding: 40px 40px 40px;
+      margin-bottom: 30px;
+      background: $color-bg-3;
+
+      @include respond-to(tablet) {
+        padding: 30px 83px 30px;
+      }
+
+      &:before {
+        @include respond-to(tablet) {
+          content: "";
+          position: absolute;
+          left: 70px;
+          top: 30px;
+          width: 3px;
+          height: 32px;
+          background: $color-bg-lead;
+        }
+      }
+
+      .mobile-wrap {
+        position: relative;
+        padding: 0;
+
+        @include respond-to(mobile-ex) {
+          display: block;
+          width: 600px;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
+        &:before {
+          @include respond-to(mobile-ex) {
+            content: "";
+            position: absolute;
+            left: -15px;
+            top: -1px;
+            width: 3px;
+            height: 32px;
+            background: $color-bg-lead;
+          }
+        }
+      }
+
+      input {
+        width: 100%;
+        padding: 5px 10px;
+        background: none;
+        border: none;
+        font-size: 16px;
+
+        @include input-placeholder {
+          color: #9fa0a5;
+        }
+      }
+    }
+
+    .buttons {
+      .comp-button--accept {
+        margin-right: 15px;
+
+        @include respond-to(mobile-ex) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

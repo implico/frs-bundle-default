@@ -1,0 +1,37 @@
+main {
+  position: relative;
+  min-height: 200px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  @include respond-to(tablet) {
+    padding-top: 40px;
+  }
+
+  &:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-image: linear-gradient(to bottom, #f3f4f8, #fff 30%);
+
+    @include respond-to(desktop) {
+      background: transparent;
+    }
+  }
+
+  .mod-content-no-bg & {
+    min-height: 0;
+
+    @include respond-to(mobile-ex) {
+      padding-top: 0;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}

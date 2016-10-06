@@ -1,0 +1,49 @@
+// SASS-core configuration (remove if not used)
+
+// =============================================================================
+// Breakpoints
+// =============================================================================
+
+
+// $sc-tablet-min: 768px;
+// $sc-desktop-min: 992px;
+
+// $sc-mobile-lg-min: 480px;
+// $sc-tablet-lg-min: 850px;
+// $sc-desktop-lg-min: 1400px;
+
+//base breakpoints for vw/percentage converting (mainly fonts); specify only ones that are different than main breakpoints
+$sc-design-breakpoints: ();
+//example: $sc-design-breakpoints: (mobile: 600px, tablet: 900px);
+
+
+
+// =============================================================================
+// Fonts
+// =============================================================================
+$sc-font-sets: (
+  sm: (mobile: 14px, tablet: 14px, desktop: 14px),
+  md: (mobile: 16px, tablet: 18px, desktop: 16px),
+  lg: (mobile: 22px, tablet: 22px, desktop: 22px)
+) !default;
+
+//default font set for font-* mixins
+$sc-font-set-default: md !default;
+
+//font directory for sc-font-face mixin (relative to the output css file)
+$sc-font-dir: 'fonts/';
+//default font formats
+$sc-font-formats: woff woff2 ttf;
+
+//breakpoints for which font vw is not set (px value is used)
+$sc-font-conv-vw-exclude: (desktop, desktop-lg);
+
+
+
+// Bootstrap confguration
+$icon-font-path: 'fonts/bootstrap/';
+
+
+
+// Project configuration
+$transition-time: 0.3s; //default transition time

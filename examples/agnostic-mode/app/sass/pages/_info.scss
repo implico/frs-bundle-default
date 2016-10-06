@@ -1,0 +1,112 @@
+#page-info {
+  h1 {
+    margin: 0 0 30px;
+    font-weight: bold;
+    font-size: 30px;
+    color: $color-header;
+
+    @include respond-to(tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .info-list {
+    > li {
+      position: relative;
+      padding: 0px 0 0px 40px;
+      margin-bottom: 30px;
+
+      @include respond-to(tablet) {
+        padding-left: 100px;
+        padding-top: 0;
+        margin-bottom: 50px;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+
+        @include respond-to(tablet) {
+          top: 2px;
+        }
+      }
+
+      &.icon-1:before {
+        @include sprite($info-icon-1);
+
+        @include respond-to(tablet) {
+          @include sprite($info-icon-1-tablet);
+        }
+      }
+
+      &.icon-2:before {
+        @include sprite($info-icon-2);
+
+        @include respond-to(tablet) {
+          @include sprite($info-icon-2-tablet);
+        }
+      }
+      
+      &.icon-3:before {
+        @include sprite($info-icon-3);
+
+        @include respond-to(tablet) {
+          @include sprite($info-icon-3-tablet);
+        }
+      }
+      
+      &.icon-4:before {
+        @include sprite($info-icon-4);
+
+        @include respond-to(tablet) {
+          @include sprite($info-icon-4-tablet);
+        }
+      }
+      
+      &.icon-5:before {
+        @include sprite($info-icon-5);
+
+        @include respond-to(tablet) {
+          @include sprite($info-icon-5-tablet);
+        }
+      }
+
+      strong {
+        display: block;
+        margin-bottom: 12px;
+
+        @include respond-to(tablet) {
+          margin-bottom: 15px;
+        }
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      ul {
+        margin-bottom: 10px;
+
+        li {
+          position: relative;
+          padding-left: 15px;
+
+          &:before {
+            position: absolute;
+            top: 8px;
+            left: 2px;
+            content: "";
+            width: 5px;
+            height: 5px;
+            background: $color-lead;
+            border-radius: 50%;
+            opacity: 0.8;
+          }
+        }
+      }
+      
+    }
+  }
+}

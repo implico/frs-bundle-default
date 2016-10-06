@@ -1,0 +1,143 @@
+#page-inspection {
+  .inspection-details {
+    margin-bottom: 40px;
+
+    @include respond-to(tablet) {
+      margin-bottom: 60px;
+    }
+
+    .row {
+      background: $color-bg-2;
+
+      @include respond-to(tablet) {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .col {
+        position: relative;
+
+        @include respond-to(mobile-ex) {
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+
+        @include respond-to(tablet) {
+          display: table-cell;
+          float: none;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+
+        &:nth-child(1), &:nth-child(2) {
+          &:before {
+            position: absolute;
+            content: "";
+            background: #fff;
+
+            @include respond-to(mobile-ex) {
+              left: 15px;
+              right: 15px;
+              bottom: 0;
+              height: 1px;
+            }
+
+            @include respond-to(tablet) {
+              position: absolute;
+              content: "";
+              top: -15px;
+              bottom: -15px;
+              right: 0;
+              width: 1px;
+            }
+          }
+        }
+
+        &--status {
+          @include respond-to(mobile-ex) {
+            overflow: auto; //clearfix
+          }
+
+          @include respond-to(tablet) {
+            padding-left: 70px;
+          }
+
+          .heading-value {
+            @include respond-to(mobile-ex) {
+              position: relative;
+              z-index: 20;
+              float: left;
+              width: 100%;
+              padding-right: 155px;
+              margin-right: -140px;
+            }
+          }
+
+          .report {
+            @include respond-to(mobile-ex) {
+              position: relative;
+              z-index: 21;
+              float: left;
+              width: 140px;
+            }
+
+            @include respond-to(tablet) {
+              margin-top: 20px;
+            }
+
+            a {
+              color: $color-2;
+              font-weight: $font-w-medium;
+            }
+
+            .date {
+              font-size: 12px;
+            }
+          }
+        }
+
+        &--date {
+          @include respond-to(tablet) {
+            width: 28%;
+          }
+        }
+
+        &--place {
+          @include respond-to(tablet) {
+            width: 38.6%;
+          }
+        }
+
+        .heading {
+          margin-bottom: 8px;
+          text-transform: uppercase;
+
+          @include respond-to(tablet) {
+            margin-bottom: 16px;
+            white-space: nowrap;
+          }
+        }
+
+        .value {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  #inspection-map {
+    width: 90%;
+    height: 350px;
+    max-height: 70vh;
+    margin: 0 auto;
+
+    @include respond-to(tablet) {
+      width: 100%;
+    }
+  }
+}

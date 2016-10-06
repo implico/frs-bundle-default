@@ -1,0 +1,135 @@
+#page-status {
+  $padding-left: 42px;
+  $padding-left-tablet: 130px;
+
+  h2 {
+    margin: 0 0 15px;
+
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+
+    @include respond-to(tablet) {
+      padding-left: 80px;
+      text-align: left;
+    }
+
+    @include respond-to(desktop) {
+      font-weight: $font-w-medium;
+    }
+  }
+
+  ul.event-list {
+    margin-bottom: 20px;
+
+    li {
+      position: relative;
+      display: table;
+      width: 100%;
+      padding: 18px $padding-left;
+      background: $color-bg-2;
+
+      @include respond-to(tablet) {
+        padding: 15px 100px 13px $padding-left-tablet;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 21px;
+        width: 12px;
+        height: 12px;
+        margin-left: -6px;
+        margin-top: -6px;
+        border-radius: 50%;
+        background: #fff;
+
+        @include respond-to(tablet) {
+          left: 80px;
+          margin-left: 0;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 20px;
+        bottom: 0;
+        width: 2px;
+        background: #fff;
+
+        @include respond-to(tablet) {
+          left: 85px;
+        }
+      }
+
+      .event-list-content {
+        @include respond-to(tablet) {
+          display: table-cell;
+          height: 63px;
+          vertical-align: middle;
+        }
+      }
+
+      p {
+        margin-bottom: 2px;
+
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      .date {
+        font-size: 12px;
+      }
+
+      &:first-child {
+        background: $color-bg-lead;
+        color: #fff;
+
+        &:after {
+          top: 50%;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          bottom: 50%;
+        }
+      }
+    }
+  }
+
+  .notify-link {
+    position: relative;
+    min-height: 24px;
+    margin-left: $padding-left;
+    padding: 0px 10px 0 40px;
+
+    @include respond-to(tablet) {
+      margin-left: $padding-left-tablet;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      @include sprite($layout-bell);
+    }
+
+    a {
+      display: inline-block;
+      line-height: 1.2;
+      color: #004181;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+}

@@ -1,4 +1,6 @@
-  //enable swig templating engine
+  /*****************************************
+    Enable Swig templating engine / BEGIN
+  ******************************************/
   
   var swig = require('gulp-swig');
   //change src glob to scripts dir
@@ -22,3 +24,7 @@
     this.cancel();
     return stream;
   }
+
+  /*****************************************
+    Enable Swig templating engine / END
+  ******************************************/

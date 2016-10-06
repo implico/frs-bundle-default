@@ -1,0 +1,194 @@
+.comp-content {
+  width: 767px;
+  max-width: 100%;
+  margin: 0 auto;
+  //overflow: hidden;
+
+  &--wide {
+    width: 1050px;
+  }
+
+  &--narrow {
+    width: 600px;
+  }
+
+  &--panel {
+    $padding-right: 45px;
+
+    width: 500px;
+    padding: 20px 15px;
+    background: #00417e;
+
+    color: #fff;
+
+    @include respond-to(mobile-ex) {
+      width: 100%;
+    }
+
+    @include respond-to(tablet) {
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin: 0 0 30px;
+
+      .tooltip-icon {
+        position: relative;
+        top: 4px;
+      }
+    }
+
+    .tooltip-icon {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      @include sprite($layout-panel-tooltip);      
+    }
+
+    .desc {
+      margin-bottom: 40px;
+    }
+
+    .form-group {
+      position: relative;
+
+      &--tooltip {
+        padding-right: $padding-right;
+
+        .tooltip-icon {
+          position: absolute;
+          right: 0;
+          bottom: 4px;
+        }
+      }
+
+      label {
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      input {
+        height: 40px;
+        border-radius: 0;
+      }
+    }
+
+    .checkbox {
+      @include clearfix;
+      min-height: 40px;
+      padding-top: 10px;
+      margin-bottom: 35px;
+
+      label {
+        padding-left: 0;
+
+        input {
+          display: none;
+          margin-top: 15px;
+          margin-left: 0;
+
+          &:checked + .input-label {
+            &:after {
+              display: block;
+            }
+          }
+
+          .old-ie & {
+            display: inline;
+          }
+        }
+
+        .input-label {
+          position: relative;
+          display: inline-block;
+          padding: 10px 0 0 55px;
+
+          .old-ie & {
+            padding-left: 20px;
+
+            &:before, &:after {
+              display: none !important;
+            }
+          }
+
+          //check field
+          &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 41px;
+            height: 41px;
+            background: #fff;
+          }
+
+          //check mark
+          &:after {
+            position: absolute;
+            display: none;
+            content: "";
+            left: 12px;
+            top: 14px;
+            @include sprite($layout-panel-check);
+          }
+
+          a {
+            color: $color-2;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .submit-wrap {
+      margin-bottom: 30px;
+
+      &--tooltip {
+        padding-right: $padding-right;
+      }
+
+      button {
+        width: 100%;
+        padding-top: 11px;
+        padding-bottom: 11px;
+      }
+    }
+
+    .footer-links {
+      padding-right: $padding-right;
+
+      br {
+        @include respond-to(tablet) {
+          display: none;
+        }
+      }
+
+      a {
+        color: $color-2;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.pull-left {
+          @include respond-to(mobile-ex) {
+            float: none !important;
+            display: inline-block;
+            margin-bottom: 15px;
+          }
+        }
+
+        &.pull-right {
+          @include respond-to(mobile-ex) {
+            float: none !important;
+          }
+        }
+      }
+    }
+  }
+}

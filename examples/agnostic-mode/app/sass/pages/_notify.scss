@@ -1,0 +1,142 @@
+#page-notify {
+  .email-phone-inputs-wrap {
+    margin-bottom: 40px;
+
+    .email-phone-inputs {
+      .col {
+        margin-bottom: 0;
+
+        &.col-email {
+          label {
+            margin-bottom: 15px;
+            background: $color-bg-lead;
+
+            @include respond-to(tablet) {
+              margin-bottom: 0;
+            }
+
+            .input-label {
+              color: #fff;
+            }
+          }
+        }
+
+        &.col-phone {
+          label {
+            background: $color-bg-2; 
+          }
+        }
+
+        label {
+          display: block;
+          padding: 30px 30px;
+          margin: 0;
+
+          @include respond-to(tablet) {
+            padding: 30px 40px;
+          }
+
+          .input-label {
+            display: block;
+            margin-bottom: 15px;
+
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: normal;
+          }
+
+          .input-phone-wrap {
+            position: relative;
+
+            input {
+              padding-left: 45px;
+            }
+          }
+
+          input {
+            width: 100%;
+            padding: 10px 12px;
+            border: none;
+            font-size: 14px;
+            color: $color-lead;
+            font-weight: normal;
+          }
+
+          .input-phone-prefix {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 14px;
+            font-weight: normal;
+            color: $color-lead;
+          }
+        }
+      }
+    }
+  }
+
+  .email-phone-use-wrap {
+    @include clearfix;
+    margin-bottom: 50px;
+
+    .email-phone-use {
+      label {
+        float: left;
+        cursor: pointer;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        input {
+          display: none;
+
+          .old-ie & {
+            display: inline;
+            float: left;
+            margin-right: 5px;
+            margin-top: 13px;
+          }
+        }
+
+        .icon {
+          float: left;
+        }
+
+        &.email-use {
+          .icon {
+            @include sprite($notify-email-use);
+            margin-top: 6px;
+          }
+
+          input:checked + .icon, .old-ie & .icon {
+            @include sprite($notify-email-use-checked);
+          }
+        }
+
+        &.phone-use {
+          .icon {
+            @include sprite($notify-phone-use);
+          }
+
+          input:checked + .icon, .old-ie & .icon {
+            @include sprite($notify-phone-use-checked);
+          }
+        }
+
+      }
+    }
+  }
+
+  .submit-wrap {
+    .comp-button--accept {
+      margin-right: 15px;
+
+      @include respond-to(mobile-ex) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

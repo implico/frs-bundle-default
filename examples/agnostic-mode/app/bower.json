@@ -1,0 +1,10 @@
+{
+  "name": "frs-agnostic-mode",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "meyer-reset": "*",
+    "compass-breakpoint": "2.*.*",
+    "sass-core": "*"
+  }
+}

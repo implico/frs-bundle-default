@@ -1,0 +1,22 @@
+.mod-not-logged {
+  header.layout {
+    .messages, .main-menu-wrap {
+      display: none;
+    }
+
+    // .logo {
+    //   left: 50%;
+    //   margin-left: -35px;
+    // }
+  }
+}
+
+.mod-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include respond-to(desktop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

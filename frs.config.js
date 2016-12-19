@@ -113,27 +113,36 @@ module.exports = function(config, dirs, appData) {
   //   watch: false
   // }
 
+  //switch to webpack (ES2015 imports)
+  // compMain.filename = 'app';  //set entry filename - possible a glob, preferred single to watch separately
+  // compMain.webpack = ['app/**/*.js']; // watched files
+
   //add a comp (full parameters)
   // comps.comp_name = {
-  //   filename: 'comp_filename',      //set to false to not produce any output file (for sub-comps); if not set, defaults to comp id
+  //   filename: 'app',      //set to false to not produce any output file (for sub-comps); if not set, defaults to comp id
+  //                         //.js extension added automatically unless the name contains a dot
+  //                         //for webpack: enter a filename or glob, e.g. ['app', 'app2'] (.js extension appended automatically if dot not found)
 
   //   bower: ['**/*.js'],   //set only name of the package
   //   vendor: ['**/*.js'],  //path relative to the appropriate directory
   //   app: ['**/*.js'],     //path relative to the appropriate directory
+  //   webpack: false,       //disabled by default
+  //   // webpack: ['app/**/*.js'],  //example webpack use, disables bower, vendor and app props
 
-  //   //set prioritized paths
+  //   //set prioritized paths (does not apply for webpack)
   //   priority: {
   //     vendor: [],
   //     app: []
   //   },
 
-  //   //set other comp ids to include
+  //   //set other comp ids to include (does not apply for webpack)
   //   dependencies: [],
 
   //   //set comps to exclude all loaded scripts in other comps, e.g.
   //   //excludeIn: ['comp1', 'comp2'] //excluded in selected comps
   //   //excludeIn: true   //excluded in all other comps
   //   //excludeIn: false  //no exclusion
+  //   //does not apply for webpack
   //   excludeIn: false,
 
   //   watch: true  //not needed, watch blocked only if false

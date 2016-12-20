@@ -116,6 +116,7 @@ module.exports = function(config, dirs, appData) {
   //switch to webpack (ES2015 imports)
   // compMain.filename = 'app';  //set entry filename - possible a glob, preferred single to watch separately
   // compMain.webpack = ['app/**/*.js']; // watched files
+  // config.lint.options.parserOptions.sourceType = 'module';
 
   //add a comp (full parameters)
   // comps.comp_name = {

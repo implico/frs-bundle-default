@@ -1,6 +1,6 @@
 # Agnostic mode
 
-Dist version with SASS compiler.
+Basic dist version with SASS compiler. Use if your employer needs a framework-independent version.
 
 
 ## Installation

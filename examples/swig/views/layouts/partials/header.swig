@@ -1,2 +1,2 @@
-<header class="layout">
+<header class="header">
 </header>

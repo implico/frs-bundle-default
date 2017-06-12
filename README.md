@@ -29,6 +29,7 @@ frs start
 
 
 <br>
+
 ## Directory structure of the `src/`:
 
 ### Fonts: `/fonts`
@@ -56,7 +57,12 @@ If you want to skip any of the Bower packages, you have 2 options:
 
 
 ### Styles: `/styles`
-A simple directory structure is taken from [SASS-starter][sass-starter].
+
+A simple directory structure for [BEM](http://getbem.com/) methodology implementation:
+* `style.scss`: contains only imports of included files
+* `modules`: project-specific config (common variables, fonts, colors) and mixins
+* `components`: block styling
+
 
 By default, the following libraries are included:
 - [meyer-reset] - provides CSS reset

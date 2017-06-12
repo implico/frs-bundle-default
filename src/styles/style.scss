@@ -1,30 +1,23 @@
-// variables first, to override default libraries' options
-@import 'config/variables';
+// Variables first, to override default package options
+@import 'modules/variables';
 
-// vendor - Bower (REMOVE IF YOU ARE NOT USING ANY OF THE FOLLOWING LIBS)
-// otherwise, update the path to your actual Bower dir path (if app dir changed),
-// set variables used to configure the libs in previously imported file (recommended config/variables)
+// Vendor: package manager (Bower/npm)
 @import '../../bower_components/meyer-reset/stylesheets/meyer-reset';
 @import '../../bower_components/compass-breakpoint/stylesheets/breakpoint';
 @import '../../bower_components/sass-core/dist/sass-core';
 
-// vendor - inline
-// example (update path to actual)
+// Vendor: inline
+// Example (update path to actual):
 // @import '../../vendor/styles/some-lib/lib';
 
+// Config files
+@import 'modules/mixins';
+@import 'modules/colors';
+@import 'modules/fonts';
 
-// config files
-@import 'config/mixins';
-@import 'config/colors';
-@import 'config/fonts';
-
-
-// sprites - uncomment if used
-//@import 'sprites/**/*';
+// Sprites (directory will be automatically created)
+@import 'sprites/**/*';
 
 
-//components
+// Components
 @import 'components/**/*';
-
-//pages
-@import 'pages/**/*';

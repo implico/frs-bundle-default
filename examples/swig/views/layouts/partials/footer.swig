@@ -1,2 +1,2 @@
-<footer class="layout">
+<footer class="footer">
 </footer>

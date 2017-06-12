@@ -17,13 +17,13 @@
       
   </head>
     
-  <body{% block bodyAttr %}{% endblock %}>
+  <body class="body">
 
-    <div id="layout-main-wrap">
+    <div class="body__container">
 
       {% include "partials/header.swig" %}
 
-      <main>
+      <main class="main">
         {% block content %}{% endblock %}
       </main>
 

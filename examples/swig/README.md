@@ -19,7 +19,6 @@ The proposed structure is:
 * `views/layouts`: contains layout templates (i.e. common markup for all views, like header and footer). Usually there is only one layout.
 * `views/scripts`: contains script (particular pages) templates. Scripts [extend](http://twig.sensiolabs.org/doc/tags/extends.html) layouts.
 
-You can inject custom code using blocks - by default there are 3 of them:
+You can inject custom code using blocks - by default there are 2 of them:
 * `content` - page content
-* `headTitle` - page title in the &lt;head&gt; section
 * `bodyAttr` - attributes appended to the &lt;body&gt; tag

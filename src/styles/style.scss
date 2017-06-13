@@ -2,9 +2,9 @@
 @import 'modules/variables';
 
 // Vendor: package manager (Bower/npm)
-@import '../../bower_components/meyer-reset/stylesheets/meyer-reset';
-@import '../../bower_components/compass-breakpoint/stylesheets/breakpoint';
-@import '../../bower_components/sass-core/dist/sass-core';
+@import 'reset-css';
+@import 'compass-breakpoint';
+@import 'sass-core';
 
 // Vendor: inline
 // Example (update path to actual):

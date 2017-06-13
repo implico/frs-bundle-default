@@ -6,18 +6,25 @@ This is a bundle for [Frontend-starter][frontend-starter] with default directory
 ## Installation
 
 Before start you need:
-* [Bower][bower]
+* [Bower][bower] or [npm] (when using the latter one, uncomment webpack support in the `frs.config.js` file and add corresponding dependencies to the `package.json` file)
 * Git, e.g. [Github desktop](https://desktop.github.com/)
 
 Install [Frontend-starter][frontend-starter], then unpack this repo to the desired project location (if you clone, you'd rather want to remove the `.git` directory, because as it is just a kind of template, it won't be under version control). Remember **not to use a directory containing an exclamation mark (!)** - it breaks glob patterns used by the tasks.
 
 Then run:
+* Bower:
 
-```
-bower install
-```
+  ```
+  bower install
+  ```
 
-On Windows, remember to run Bower from Git Shell. Bower files are by default placed in `bower_components` - to change this, edit the `.bowercc` file and change `dirs.bower` config definition.
+  On Windows, remember to run Bower from Git Shell. Bower files are by default placed in `bower_components` - to change this, edit the `.bowercc` file and change `dirs.bower` config definition.
+
+* npm:
+
+  ```
+  npm install
+  ```
 
 Then use the [Frontend-starter gulp tasks](https://github.com/implico/frontend-starter#cli-tasks). For example, for the first init, use:
 
@@ -65,20 +72,20 @@ A simple directory structure for [BEM](http://getbem.com/) methodology implement
 
 
 By default, the following libraries are included:
-- [meyer-reset] - provides CSS reset
+- [reset-css] - provides CSS reset (by Eric Meyer)
 - [Breakpoint](http://breakpoint-sass.com/) for convenient media queries handling
 - [SASS-core][sass-core] - mixins and functions such as: automatic rem/vw/percentage unit converters for dimensions and fonts, responsive sprites, grids
 
 If you don't need any of them:
-* remove the dependency from the `bower.json` file
+* remove the dependency from the `bower.json`/`package.json` file (depending on the package manager you use)
 * remove import from `styles/style.scss`
 
-Place any third-party scripts that you can't or don't want to install via Bower in `/vendor/styles`.
+Place any third-party scripts that you can't or don't want to install via package manager into `/vendor/styles`.
 
 
 <a name="styles-sprites"></a>
 #### Sprites
-Sprites are generated automatically by [gulp-spritesmith] for all images placed in the `/sprites` directory. To use a sprite, you have to uncomment the line in `style.scss` with sprite sheet import and then use the mixin `@include sprite($filename)`. See more in [Frontend-starter sprite docs](https://github.com/implico/frontend-starter#sprites) and [SASS-core docs][sass-core].
+Sprites are generated automatically by [gulp-spritesmith] for all images placed in the `/sprites` directory. To use a sprite, use the mixin `@include sprite($filename)`. See more in [Frontend-starter sprite docs](https://github.com/implico/frontend-starter#sprites) and [SASS-core docs][sass-core].
 
 
 ### Views: `/views`
@@ -92,5 +99,6 @@ See [examples](examples/) to enable [Swig][gulp-swig] support.
 [gulp-swig]: https://github.com/colynb/gulp-swig
 [main-bower-files]: https://github.com/ck86/main-bower-files
 [meyer-reset]: https://github.com/adamstac/meyer-reset
+[npm]: https://www.npmjs.com/
 [sass-core]: https://github.com/implico/sass-core
 [sass-starter]: https://github.com/implico/sass-starter

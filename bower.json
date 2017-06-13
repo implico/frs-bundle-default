@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "meyer-reset": "*",
+    "reset-css": "2.*.*",
     "compass-breakpoint": "2.*.*",
-    "sass-core": "*",
+    "sass-core": "~0.1.14",
 
-    "jquery": "2.*.*"
+    "jquery": "3.*.*"
   }
 }

@@ -6,7 +6,7 @@ This is a bundle for [Frontend-starter][frontend-starter] with default directory
 ## Installation
 
 Before start you need:
-* [Bower][bower] or [npm] (when using the latter one, uncomment webpack support in the `frs.config.js` file and add corresponding dependencies to the `package.json` file)
+* [Bower][bower] or [npm] (when using the latter one, uncomment webpack support in the `frs.config.js` file and add corresponding dependencies to the `package.json` file; remember that `sass-core` is named `sass-starter` in npm)
 * Git, e.g. [Github desktop](https://desktop.github.com/)
 
 Install [Frontend-starter][frontend-starter], then unpack this repo to the desired project location (if you clone, you'd rather want to remove the `.git` directory, because as it is just a kind of template, it won't be under version control). Remember **not to use a directory containing an exclamation mark (!)** - it breaks glob patterns used by the tasks.

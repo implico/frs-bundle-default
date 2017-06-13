@@ -11,9 +11,10 @@ Before start you need:
 
 Install [Frontend-starter][frontend-starter], then unpack this repo to the desired project location (if you clone, you'd rather want to remove the `.git` directory, because as it is just a kind of template, it won't be under version control). Remember **not to use a directory containing an exclamation mark (!)** - it breaks glob patterns used by the tasks.
 
-Then run:
 * Bower
 
+  Run:
+  
   ```
   bower install
   ```
@@ -22,7 +23,9 @@ Then run:
 
 * npm
   
-  First, uncomment webpack support in the `frs.config.js` file and move dependencies from `bower.json` to the `package.json` file; change `sass-core` to `sass-starter` there (the same package, but different name in npm) and in `src/styles/style.scss`
+  First, uncomment webpack support in the `frs.config.js` file and move dependencies from `bower.json` to the `package.json` file; change `sass-core` to `sass-starter` there (the same package, but different name in npm) and in `src/styles/style.scss`.
+  
+  Finally, run:
   
   ```
   npm install
@@ -74,7 +77,7 @@ A simple directory structure for [BEM](http://getbem.com/) methodology implement
 
 
 By default, the following libraries are included:
-- [reset-css] - provides CSS reset (by Eric Meyer)
+- [reset-css](https://github.com/shannonmoeller/reset-css) - provides CSS reset (by Eric Meyer)
 - [Breakpoint](http://breakpoint-sass.com/) for convenient media queries handling
 - [SASS-core][sass-core] - mixins and functions such as: automatic rem/vw/percentage unit converters for dimensions and fonts, responsive sprites, grids
 

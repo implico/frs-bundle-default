@@ -17,12 +17,13 @@ Then run:
   ```
   bower install
   ```
-
+  
   On Windows, remember to run Bower from Git Shell. Bower files are by default placed in `bower_components` - to change this, edit the `.bowercc` file and change `dirs.bower` config definition.
 
 * npm
+  
   First, uncomment webpack support in the `frs.config.js` file and move dependencies from `bower.json` to the `package.json` file; change `sass-core` to `sass-starter` there (the same package, but different name in npm) and in `src/styles/style.scss`
-
+  
   ```
   npm install
   ```

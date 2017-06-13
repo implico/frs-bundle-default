@@ -6,13 +6,13 @@ This is a bundle for [Frontend-starter][frontend-starter] with default directory
 ## Installation
 
 Before start you need:
-* [Bower][bower] or [npm] (when using the latter one, uncomment webpack support in the `frs.config.js` file and add corresponding dependencies to the `package.json` file; remember that `sass-core` is named `sass-starter` in npm)
+* [Bower][bower] or [npm]
 * Git, e.g. [Github desktop](https://desktop.github.com/)
 
 Install [Frontend-starter][frontend-starter], then unpack this repo to the desired project location (if you clone, you'd rather want to remove the `.git` directory, because as it is just a kind of template, it won't be under version control). Remember **not to use a directory containing an exclamation mark (!)** - it breaks glob patterns used by the tasks.
 
 Then run:
-* Bower:
+* Bower
 
   ```
   bower install
@@ -20,7 +20,8 @@ Then run:
 
   On Windows, remember to run Bower from Git Shell. Bower files are by default placed in `bower_components` - to change this, edit the `.bowercc` file and change `dirs.bower` config definition.
 
-* npm:
+* npm
+  First, uncomment webpack support in the `frs.config.js` file and move dependencies from `bower.json` to the `package.json` file; change `sass-core` to `sass-starter` there (the same package, but different name in npm) and in `src/styles/style.scss`
 
   ```
   npm install

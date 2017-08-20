@@ -97,6 +97,14 @@ module.exports = function(config, dirs, appData) {
     JS
   *********************/
 
+  // Enable webpack (ES2015 imports)
+  // compMain.filename = 'app';  // Set entry filename (default extension if does not contain a dot: js) - possible a glob, preferred single to watch separately
+  // compMain.webpack = ['**/*.{js,jsx}']; // Watched files (remove jsx if not needed)
+  // config.lint.options.parserOptions = {
+  //   sourceType: 'module',
+  //   ecmaVersion: 5
+  // }
+
   // Store vendor and app code in separate files
   // config.js.concatVendorApp = false;
 
@@ -111,8 +119,9 @@ module.exports = function(config, dirs, appData) {
 
   // Disable Babel
   // config.js.inject.babel = false;
-  // config.lint.options.parserOptions.ecmaVersion = 5;
-
+  // config.lint.options.parserOptions = {
+  //   ecmaVersion: 5
+  // }
 
   // Main JS: change filename to script.js
   // compMain.filename = 'script.js';
@@ -127,11 +136,6 @@ module.exports = function(config, dirs, appData) {
   //   excludeIn: true,
   //   watch: false
   // }
-
-  // Switch to webpack (ES2015 imports)
-  // compMain.filename = 'app';  // Set entry filename (default extension if does not contain a dot: js) - possible a glob, preferred single to watch separately
-  // compMain.webpack = ['**/*.{js,jsx}']; // Watched files (remove jsx if not needed)
-  // config.lint.options.parserOptions.sourceType = 'module';
 
   // Add a comp (full parameters)
   // comps.comp_name = {
@@ -169,6 +173,8 @@ module.exports = function(config, dirs, appData) {
   /********************
     Lint
   *********************/
+
+  // For switching to modules (require/import) instead of global packages, see "enable webpack" in JS section
 
   // Add allowed globals
   // config.lint.options.globals = {
